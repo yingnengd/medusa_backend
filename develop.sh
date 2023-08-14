@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # rc-update命令将其添加到启动项中。
-rc-update add redis
-rc-service redis start
+# rc-update add redis
+# rc-service redis start
 
 #Run migrations to ensure the database is updated
 medusa migrations run
