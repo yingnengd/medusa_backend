@@ -65,8 +65,14 @@ const plugins = [
       webhook_secret: STRIPE_WEBHOOK_SECRET,
     },
   },
-    // ...
-    `@medusajs/file-local`
+  //...
+  {
+    resolve: `@medusajs/file-local`,
+    options: {
+      upload_dir: 'uploads/images', // optional
+      backend_url: 'wica.wica.ontheweb.nu' // optional
+    }
+  },
 ];
 
 module.exports = {
