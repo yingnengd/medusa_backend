@@ -91,7 +91,7 @@ const plugins = [
     options: {
       upload_dir: 'uploads/images', // optional
       backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
-    }
+    },
   },
 ];
 
