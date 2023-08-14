@@ -10,8 +10,8 @@ medusa develop
 medusa user -e mei@outlook.com -p Syw!888888
 
 #install pluns
-npm install @medusajs/file-local 
+yarn add @medusajs/file-local 
 
-npm install medusa-plugin-meilisearch 
+yarn add medusa-plugin-meilisearch 
 
-npm install
+yarn install
