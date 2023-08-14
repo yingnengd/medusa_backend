@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# rc-update命令将其添加到启动项中。
-# rc-update add redis
-# rc-service redis start
-
 #Run migrations to ensure the database is updated
 medusa migrations run
 
@@ -19,3 +15,13 @@ yarn add @medusajs/file-local
 yarn add medusa-plugin-meilisearch 
 
 yarn install
+
+cat <<EOF >> /etc/postgresql/pg_hba.conf host all all 0.0.0.0/0 md5 EOF
+cat <<EOF >> /etc/postgresql/postgresql.conf listen_addresses = '*' EOF
+
+#使用 postgres 用户登录
+psql -U yynid
+
+#postgres=# 是 postgres 提示符 为 postgres 用户设置密码
+postgres=# \password Syw!888888
+
