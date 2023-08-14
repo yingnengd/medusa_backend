@@ -12,6 +12,9 @@ COPY yarn.* .
 # Run the apk update command to update package information
 RUN apk update
 
+RUN apk add redis
+RUN rc-update add redis
+
 # Install dependencies
 RUN yarn --network-timeout 1000000
 
