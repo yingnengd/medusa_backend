@@ -90,7 +90,7 @@ const plugins = [
     resolve: `@medusajs/file-local`,
     options: {
       upload_dir: 'uploads/images', // optional
-      backend_url: 'wica.wica.ontheweb.nu' // optional
+      backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
     }
   },
 ];
