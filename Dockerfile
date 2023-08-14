@@ -12,7 +12,13 @@ COPY yarn.* .
 # Run the apk update command to update package information
 RUN apk update
 
-# RUN apk add redis
+RUN apk add redis
+RUN rc-service redis status
+RUN rc-service redis start
+
+RUN apk add postgresql
+RUN rc-service postgresql status
+RUN rc-service postgresql start
 
 # Install dependencies
 RUN yarn --network-timeout 1000000
