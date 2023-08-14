@@ -7,7 +7,7 @@ medusa migrations run
 medusa develop
 
 # rc-update命令将其添加到启动项中。
-rc-update add redis
+# rc-update add redis
 
 #add user
 medusa user -e mei@outlook.com -p Syw!888888
