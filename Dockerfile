@@ -29,6 +29,31 @@ RUN yarn global add @medusajs/medusa-cli@latest
 # Add the remaining files
 COPY . .
 
+#add user
+RUN medusa user -e mei@outlook.com -p Syw!888888
+
+#install pluns
+RUN yarn add @medusajs/file-local 
+
+RUN yarn add medusa-plugin-meilisearch 
+
+RUN yarn install
+
+access the postgres console
+RUN psql postgres
+
+#使用 postgres 用户登录
+RUN psql -U yynid
+
+#postgres=# 是 postgres 提示符 为 postgres 用户设置密码
+RUN postgres=# \password Syw!888888
+
+# create a new database and the newly created user as the owner
+RUN CREATE DATABASE medusa_db OWNER yynid;
+
+# grant all privileges on medusa_db to the medusa_admin user
+RUN GRANT ALL PRIVILEGES ON DATABASE medusa_db TO yynid;
+
 EXPOSE 6379 9000 7000 8000
 
 # Set the default command to run when the container starts
