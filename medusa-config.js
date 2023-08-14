@@ -33,7 +33,8 @@ const STORE_CORS = process.env.STORE_CORS || " https://deluxe-chebakia-ad2b74.ne
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
   // process.env.DATABASE_URL || "postgres://localhost/medusa-store";
-  process.env.DATABASE_URL || "postgres://localhost/medusa-db";
+  // process.env.DATABASE_URL || "postgres://localhost/medusa-db";
+  DATABASE_URL="postgres://medusa_admin:Syw!888888@localhost:5432/medusa_db"
 
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
@@ -99,12 +100,12 @@ module.exports = {
     redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
     database_url: DATABASE_URL,
-    // database_type: "postgres",
-    database_database: "./medusa-db.sql",
-    database_type: "sqlite",
+    database_type: "postgres",
+    // database_database: "./medusa-db.sql",
+    // database_type: "sqlite",
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
-    database_extra: { ssl: { rejectUnauthorized: false } },
+    // database_extra: { ssl: { rejectUnauthorized: false } },
   },
   plugins,
 };
