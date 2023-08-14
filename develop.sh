@@ -1,5 +1,11 @@
 #!/bin/bash
 
+rc-service redis status
+rc-service redis start
+
+rc-service postgresql status
+rc-service postgresql start
+
 #Run migrations to ensure the database is updated
 medusa migrations run
 
