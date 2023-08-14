@@ -32,9 +32,9 @@ const STORE_CORS = process.env.STORE_CORS || " https://deluxe-chebakia-ad2b74.ne
 
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
-  // process.env.DATABASE_URL || "postgres://localhost/medusa-store";
+  process.env.DATABASE_URL || "postgres://localhost/medusa-store";
   // process.env.DATABASE_URL || "postgres://localhost/medusa-db";
-  DATABASE_URL="postgres://medusa_admin:Syw!888888@localhost:5432/medusa_db"
+  // DATABASE_URL="postgres://medusa_admin:Syw!888888@localhost:5432/medusa_db"
 
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
