@@ -14,6 +14,11 @@ RUN apk update
 
 RUN apk add redis
 
+RUN apk add systemd
+
+RUN systemctl enable redis-server
+RUN service redis-server start
+
 # Install dependencies
 RUN yarn --network-timeout 1000000
 
