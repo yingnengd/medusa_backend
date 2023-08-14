@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rc-service redis status
+# rc-service redis status
 rc-service redis start
 
 rc-service postgresql status
