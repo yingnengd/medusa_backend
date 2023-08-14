@@ -29,5 +29,7 @@ RUN yarn global add @medusajs/medusa-cli@latest
 # Add the remaining files
 COPY . .
 
+EXPOSE 6379 9000 7000 8000
+
 # Set the default command to run when the container starts
 ENTRYPOINT ["sh", "develop.sh"]
