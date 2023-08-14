@@ -65,6 +65,24 @@ const plugins = [
       webhook_secret: STRIPE_WEBHOOK_SECRET,
     },
   },
+  {
+  resolve: `medusa-plugin-meilisearch`,
+  options: {
+    // config object passed when creating an instance of the MeiliSearch client
+    config: {
+      host: "http://127.0.0.1:7700",
+      apiKey: "your_master_key",
+    },
+    settings: {
+      // index name
+      products: {
+        // MeiliSearch's setting options to be set on a particular index
+        searchableAttributes: ["title", "description", "variant_sku", "thumbnail", "variants"],
+        displayedAttributes: ["title", "description", "variant_sku", "thumbnail", "variants"],
+      },
+    },
+  },
+},
   //...
   {
     resolve: `@medusajs/file-local`,
