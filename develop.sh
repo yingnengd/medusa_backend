@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# rc-service redis status
+apk add redis
+rc-service redis status
 rc-service redis start
 
+apk add postgresql
 rc-service postgresql status
 rc-service postgresql start
 
