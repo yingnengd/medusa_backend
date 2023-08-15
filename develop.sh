@@ -1,5 +1,7 @@
 #!/bin/bash
 
+yarn install 
+
 apk add redis
 rc-service redis status
 rc-service redis start
