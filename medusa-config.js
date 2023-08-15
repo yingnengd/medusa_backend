@@ -85,13 +85,13 @@ const plugins = [
   },
 },
   //...
-  {
-    resolve: `@medusajs/file-local`,
-    options: {
-      upload_dir: './uploads', // optional
-      #backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
-    },
-  },
+  // {
+  //   resolve: `@medusajs/file-local`,
+  //   options: {
+  //     upload_dir: './uploads', // optional
+  //     #backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
+  //   },
+  // },
 ];
 
 module.exports = {
