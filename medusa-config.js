@@ -47,7 +47,7 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
-  `medusa-file-minio`,
+  `@medusajs/file-local`,
   // Minio
   {
     resolve: `medusa-file-minio`,
