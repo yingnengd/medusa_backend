@@ -36,7 +36,7 @@ const DATABASE_URL =
   DATABASE_URL="postgres://yynid:Syw!888888@localhost:5432/medusa_db"
 
 // Medusa uses Redis, so this needs configuration as well
-// const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "pk_live_51NdOyMGHWQ38AB7XcAxORp5dAbpZ5rxqGfFvVe0o0w75vmlzGHnY8YxLHedEoRFOzMw4K6A6ot3fd6oX98u6LFj000KUErzPDd";
@@ -88,8 +88,8 @@ const plugins = [
   {
     resolve: `@medusajs/file-local`,
     options: {
-      upload_dir: 'uploads/images', // optional
-      backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
+      upload_dir: './uploads', // optional
+      #backend_url: 'ruaa.ruaa.ontheweb.nu', // optional
     },
   },
 ];
