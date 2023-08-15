@@ -1,5 +1,5 @@
 #!/bin/bash
-n init 
+yarn init 
 
 yarn install 
 
