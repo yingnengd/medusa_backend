@@ -27,7 +27,7 @@ RUN psql postgres
 RUN psql -U yynid
 
 #postgres=# 是 postgres 提示符 为 postgres 用户设置密码
-RUN postgres=# \password Syw!888888
+RUN postgres=# \password postgres
 
 # create a new database and the newly created user as the owner
 RUN CREATE DATABASE medusa_db OWNER yynid;
